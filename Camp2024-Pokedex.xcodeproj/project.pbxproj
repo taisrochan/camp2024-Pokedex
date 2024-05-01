@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F6934272BE2B74100C29381 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6934262BE2B74100C29381 /* Poppins-Regular.ttf */; };
 		8F6934292BE2B76D00C29381 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6934282BE2B76D00C29381 /* Poppins-Bold.ttf */; };
+		8F69342C2BE2C0C600C29381 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69342B2BE2C0C600C29381 /* SplashScreen.swift */; };
 		8FF78BDD2BE27466008F2138 /* Camp2024_PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */; };
 		8FF78BDF2BE27466008F2138 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF78BDE2BE27466008F2138 /* ContentView.swift */; };
 		8FF78BE12BE2746B008F2138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF78BE02BE2746B008F2138 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		8F6934262BE2B74100C29381 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		8F6934282BE2B76D00C29381 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		8F69342B2BE2C0C600C29381 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8FF78BD92BE27466008F2138 /* Camp2024-Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camp2024-Pokedex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp2024_PokedexApp.swift; sourceTree = "<group>"; };
 		8FF78BDE2BE27466008F2138 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8FF78BDE2BE27466008F2138 /* ContentView.swift */,
 				8FF78BE02BE2746B008F2138 /* Assets.xcassets */,
 				8FF78BE22BE2746B008F2138 /* Preview Content */,
+				8F69342B2BE2C0C600C29381 /* SplashScreen.swift */,
 			);
 			path = "Camp2024-Pokedex";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F69342C2BE2C0C600C29381 /* SplashScreen.swift in Sources */,
 				8FF78BDF2BE27466008F2138 /* ContentView.swift in Sources */,
 				8FF78BDD2BE27466008F2138 /* Camp2024_PokedexApp.swift in Sources */,
 				8FF78BEF2BE27FEB008F2138 /* PokeColors.swift in Sources */,
