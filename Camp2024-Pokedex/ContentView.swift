@@ -14,12 +14,14 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+                .font(.custom("Poppins-Regular", size: 16))
         }
         .padding()
         .background(Color("iOasys"))
     }
+    
 }
-
-#Preview {
-    ContentView()
-}
+//
+//#Preview {
+//    ContentView()
+//}

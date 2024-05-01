@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6934272BE2B74100C29381 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6934262BE2B74100C29381 /* Poppins-Regular.ttf */; };
+		8F6934292BE2B76D00C29381 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6934282BE2B76D00C29381 /* Poppins-Bold.ttf */; };
 		8FF78BDD2BE27466008F2138 /* Camp2024_PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */; };
 		8FF78BDF2BE27466008F2138 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF78BDE2BE27466008F2138 /* ContentView.swift */; };
 		8FF78BE12BE2746B008F2138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF78BE02BE2746B008F2138 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F6934262BE2B74100C29381 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		8F6934282BE2B76D00C29381 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		8FF78BD92BE27466008F2138 /* Camp2024-Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camp2024-Pokedex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp2024_PokedexApp.swift; sourceTree = "<group>"; };
 		8FF78BDE2BE27466008F2138 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 		8FF78BDB2BE27466008F2138 /* Camp2024-Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				8FF78BF42BE292EA008F2138 /* Font */,
 				8FF78BF12BE28190008F2138 /* Colors */,
 				8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */,
 				8FF78BDE2BE27466008F2138 /* ContentView.swift */,
@@ -76,6 +81,15 @@
 				8FF78BEE2BE27FEB008F2138 /* PokeColors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		8FF78BF42BE292EA008F2138 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8F6934262BE2B74100C29381 /* Poppins-Regular.ttf */,
+				8F6934282BE2B76D00C29381 /* Poppins-Bold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +150,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6934272BE2B74100C29381 /* Poppins-Regular.ttf in Resources */,
 				8FF78BE42BE2746B008F2138 /* Preview Assets.xcassets in Resources */,
 				8FF78BE12BE2746B008F2138 /* Assets.xcassets in Resources */,
+				8F6934292BE2B76D00C29381 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +303,7 @@
 				DEVELOPMENT_TEAM = 6P7YL4PD82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Camp2024-Pokedex/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +333,7 @@
 				DEVELOPMENT_TEAM = 6P7YL4PD82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Camp2024-Pokedex/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
