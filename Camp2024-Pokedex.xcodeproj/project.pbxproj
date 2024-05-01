@@ -53,11 +53,11 @@
 		8FF78BDB2BE27466008F2138 /* Camp2024-Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				8FF78BF12BE28190008F2138 /* Colors */,
 				8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */,
 				8FF78BDE2BE27466008F2138 /* ContentView.swift */,
 				8FF78BE02BE2746B008F2138 /* Assets.xcassets */,
 				8FF78BE22BE2746B008F2138 /* Preview Content */,
-				8FF78BEE2BE27FEB008F2138 /* PokeColors.swift */,
 			);
 			path = "Camp2024-Pokedex";
 			sourceTree = "<group>";
@@ -68,6 +68,14 @@
 				8FF78BE32BE2746B008F2138 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8FF78BF12BE28190008F2138 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				8FF78BEE2BE27FEB008F2138 /* PokeColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

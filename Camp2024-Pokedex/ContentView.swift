@@ -16,7 +16,7 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
-        .background(PokemonColors.colors[.dark])
+        .background(Color("iOasys"))
     }
 }
 
