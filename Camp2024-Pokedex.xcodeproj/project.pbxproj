@@ -16,6 +16,7 @@
 		8F69342C2BE2C0C600C29381 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69342B2BE2C0C600C29381 /* SplashScreen.swift */; };
 		8F9492C42BE30F06009D2981 /* PokemonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9492C32BE30F06009D2981 /* PokemonSelected.swift */; };
 		8F9492C92BE32FCB009D2981 /* PokemonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9492C82BE32FCB009D2981 /* PokemonItemView.swift */; };
+		8FD0CBDB2BE3D971004754CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0CBDA2BE3D971004754CD /* ContentView.swift */; };
 		8FF78BDD2BE27466008F2138 /* Camp2024_PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */; };
 		8FF78BE12BE2746B008F2138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF78BE02BE2746B008F2138 /* Assets.xcassets */; };
 		8FF78BE42BE2746B008F2138 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF78BE32BE2746B008F2138 /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		8F69342B2BE2C0C600C29381 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8F9492C32BE30F06009D2981 /* PokemonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelected.swift; sourceTree = "<group>"; };
 		8F9492C82BE32FCB009D2981 /* PokemonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonItemView.swift; sourceTree = "<group>"; };
+		8FD0CBDA2BE3D971004754CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FF78BD92BE27466008F2138 /* Camp2024-Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camp2024-Pokedex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp2024_PokedexApp.swift; sourceTree = "<group>"; };
 		8FF78BE02BE2746B008F2138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				8FF78BE02BE2746B008F2138 /* Assets.xcassets */,
 				8FF78BE22BE2746B008F2138 /* Preview Content */,
 				8F69342B2BE2C0C600C29381 /* SplashScreen.swift */,
+				8FD0CBDA2BE3D971004754CD /* ContentView.swift */,
 			);
 			path = "Camp2024-Pokedex";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				8F9492C42BE30F06009D2981 /* PokemonSelected.swift in Sources */,
 				8F09DB962BE2FCF400A380C3 /* PokeModel.swift in Sources */,
 				8F69342C2BE2C0C600C29381 /* SplashScreen.swift in Sources */,
+				8FD0CBDB2BE3D971004754CD /* ContentView.swift in Sources */,
 				8FF78BDD2BE27466008F2138 /* Camp2024_PokedexApp.swift in Sources */,
 				8F09DB982BE2FD6700A380C3 /* HomeService.swift in Sources */,
 				8FF78BEF2BE27FEB008F2138 /* PokeColors.swift in Sources */,
@@ -363,6 +367,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = ContentView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -394,6 +399,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = ContentView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

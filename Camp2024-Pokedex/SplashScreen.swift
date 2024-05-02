@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SplashScreen: View {
+struct SplashScreenView: View {
     var body: some View {
         ZStack {
             Color("ioasys")
