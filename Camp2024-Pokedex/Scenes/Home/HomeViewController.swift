@@ -39,11 +39,22 @@ struct HomeViewController: View {
                     .padding()
                     
                     HStack {
-                        TextField("Buscar Pokemon", text: $searchText)
-                            .font(.custom("Poppins-Regular", size: 19))
-                            .padding(8)
-                            .background(Color.lightGray.opacity(0.3))
-                            .cornerRadius(8)
+                        ZStack(alignment: .leading) {
+                            Image("search")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.gray)
+                                .frame(width: 16, height: 16)
+                                .padding(.leading, 8)
+                            
+                            TextField("Buscar Pokemon", text: $searchText)
+                                .font(.custom("Poppins-Regular", size: 16))
+                                .padding(.leading, 24)
+                                .padding(8)
+                                .background(Color.lightGray.opacity(0.3))
+                                .cornerRadius(8)
+                        }
+                        
                         Button(action: {
                         }) {
                             Image(systemName: "heart.fill")
@@ -56,48 +67,35 @@ struct HomeViewController: View {
                         columns: Array(
                             repeating: GridItem(.flexible(), spacing: 16),
                             count: 3),
-                        spacing: 16) {
-                            ForEach(viewModel.items, id: \.id) { item in
-                                
-                                VStack {
-                                    Rectangle()
-                                        .foregroundColor(.clear)
-                                        .background(
-                                            RoundedRectangle(cornerRadius: 8)
-                                                .stroke(Color.blue, lineWidth: 1)
-                                        )
-                                        .frame(width: 104, height: 112)
-                                        .overlay(
-                                            VStack{
-                                                Spacer()
-                                                Text("pikaName")
-                                                    .font(.custom("Poppins-Regular", size: 13))
-                                                    .foregroundColor(.black)
-                                                    .padding(.bottom, 4)
-                                            }
-                                        )
-                                    
-                                    
-//                                    Text(item.title)
-//                                        .font(.caption)
-//                                        .foregroundColor(.black)
-                                }
+                        spacing: 16)
+                    {
+                        ForEach(
+                            searchText == ""
+                            ? viewModel.items
+                            : viewModel.items.filter({ $0.name.contains(searchText.lowercased())}),
+                            id: \.id) { item in
+                                PokemonItemView(imageLink: item.url, pokemonName: item.name)
+
                             }
-                            
-                        }
-                        .padding()
+                        
+                    }
+                    .padding()
                 }
                 .padding()
+                
             }
             .navigationTitle("My Screen")
+        }.onAppear() {
+            viewModel.fetchPokemon()
         }
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeViewController()
-//    }
-//}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeViewController()
+    }
+}
 
 

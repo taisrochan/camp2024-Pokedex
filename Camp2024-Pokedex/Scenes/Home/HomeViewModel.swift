@@ -9,41 +9,22 @@ import Foundation
 import SwiftUI
 
 class MyViewModel: ObservableObject {
-    @Published var items: [Item] = []
-    @Published var pokemon: Pokemon?
-        private let client = PokemonAPIClient()
-
+    @Published var items: [PokemonEntry] = []
+    private let client = PokemonAPIClient()
+    
     
     func fetchPokemon() {
-           client.fetchPokemon { result in
-               switch result {
-               case .success(let pokemon):
-                   self.pokemon = pokemon
-               case .failure(let error):
-                   print("Failed to fetch Pokemon: \(error)")
-               }
-           }
-       }
-    
-    init() {
-        items = [
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: ""),
-            Item(id: UUID(), title: "")
-        ]
+        client.fetchPokemon { result in
+            switch result {
+            case .success(let pokemon):
+                DispatchQueue.main.async {
+                    self.items = pokemon.results.map({
+                        PokemonEntry(name: $0.name, url: $0.url)
+                    })
+                }
+            case .failure(let error):
+                print("Failed to fetch Pokemon: \(error)")
+            }
+        }
     }
-}
-
-struct Item: Identifiable {
-    let id: UUID
-    let title: String
 }

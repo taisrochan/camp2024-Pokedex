@@ -9,17 +9,22 @@ import Foundation
 import SwiftUI
 
 struct Pokemon: Codable {
-    var results: [PokemonEntry]
+    var results: [PokemonResponse]
+}
+
+struct PokemonResponse: Codable {
+    var name: String
+    var url: String
 }
 
 struct PokemonEntry: Codable, Identifiable {
-    let id = UUID()
+    var id = UUID()
     var name: String
     var url: String
 }
 
 class PokeApi {
-    func getData(completion: @escaping ([PokemonEntry]) -> ()) {
+    func getData(completion: @escaping ([PokemonResponse]) -> ()) {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151") else {
             return
         }

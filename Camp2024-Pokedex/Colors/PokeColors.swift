@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum PokemonType: String {
+enum PokemonTypesEnum: String {
     case rock
     case ghost
     case steel
@@ -30,7 +30,7 @@ enum PokemonType: String {
 }
 
 struct PokemonColors {
-    static let colors: [PokemonType: Color] = [
+    static let colors: [PokemonTypesEnum: Color] = [
         .rock: Color(hex:"#B69E31"),
         .ghost: Color(hex:"#70559B"),
         .steel: Color(hex: "#B7B9D0"),
