@@ -34,6 +34,7 @@ struct HomeViewController: View {
                         Toggle("", isOn: $isSwitchOn)
                             .labelsHidden()
                             .scaleEffect(0.7)
+                            .preferredColorScheme(isSwitchOn ? .dark : .light)
                     }
                     
                     .padding()
@@ -81,7 +82,7 @@ struct HomeViewController: View {
                                 .multilineTextAlignment(.center)
                         }
                         .frame(maxWidth: .infinity)
-                        .background(.white)
+                        .background(.clear)
                         .cornerRadius(10)
                         .padding()
                         
