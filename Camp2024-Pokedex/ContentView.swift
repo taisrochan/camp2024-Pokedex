@@ -16,12 +16,21 @@ struct ContentView: View {
                             .frame(width: 100, height: 100)
             Text("Hello, world!")
                 .font(.custom("Poppins-Regular", size: 16))
+                .onAppear {
+                    PokeApi().getData() { pokemon in
+                        print(pokemon)
+                        
+                        for pokemon in pokemon {
+                            print(pokemon.name)
+                        }
+                    }
+                }
         }
         .padding()
     }
     
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentView()
+}

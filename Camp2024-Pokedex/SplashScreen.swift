@@ -17,6 +17,6 @@ struct SplashScreen: View {
     }
 }
 
-#Preview {
-    SplashScreen()
-}
+//#Preview {
+//    SplashScreen()
+//}
