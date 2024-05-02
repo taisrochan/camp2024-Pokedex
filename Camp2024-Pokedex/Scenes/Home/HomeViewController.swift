@@ -75,22 +75,32 @@ struct HomeViewController: View {
                             : viewModel.items.filter({ $0.name.contains(searchText.lowercased())}),
                             id: \.id) { item in
                                 PokemonItemView(imageLink: item.url, pokemonName: item.name)
-                                    
-
                             }
-                        
                     }
                     .padding()
+                    
+                                }
                 }
                 .padding()
-                
+                .onTapGesture {
+                                UIApplication.shared.endEditing()
             }
             .navigationTitle("My Screen")
         }.onAppear() {
             viewModel.fetchPokemon()
         }
+        
     }
 }
+
+extension UIApplication {
+    func endEditing() {
+        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
+
+        window.endEditing(true)
+    }
+}
+
 
 
 struct ContentView_Previews: PreviewProvider {

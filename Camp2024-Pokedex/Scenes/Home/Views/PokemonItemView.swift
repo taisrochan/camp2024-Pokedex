@@ -27,6 +27,7 @@ struct PokemonItemView: View {
                 .overlay(
                     VStack{
                         Spacer()
+                        Spacer()
                         AsyncImage(url: URL(string: pokemonData?.sprites.front_default ?? "placeholder"))
                             .frame(width: 75, height: 75)
                             .onAppear {
@@ -41,7 +42,7 @@ struct PokemonItemView: View {
                                 }
                             }
                         Spacer()
-                        ZStack(alignment: .leading) {
+                        ZStack(alignment: .center) {
                             Rectangle()
                                 .foregroundColor(pokemonType.color)
                                 .frame(height: 24)
@@ -50,8 +51,6 @@ struct PokemonItemView: View {
                                 .font(.custom("Poppins-Regular", size: 13))
                                 .foregroundColor(.black)
                                 .padding(8)
-                                
-                                
                         }
                     }
                 )
