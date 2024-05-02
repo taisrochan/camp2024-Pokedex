@@ -75,6 +75,7 @@ struct HomeViewController: View {
                             : viewModel.items.filter({ $0.name.contains(searchText.lowercased())}),
                             id: \.id) { item in
                                 PokemonItemView(imageLink: item.url, pokemonName: item.name)
+                                    
 
                             }
                         

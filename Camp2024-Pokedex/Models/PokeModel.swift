@@ -23,21 +23,21 @@ struct PokemonEntry: Codable, Identifiable {
     var url: String
 }
 
-class PokeApi {
-    func getData(completion: @escaping ([PokemonResponse]) -> ()) {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151") else {
-            return
-        }
-        URLSession.shared.dataTask(with: url) { (data, response, error)  in
-            guard let data = data else { return }
-            
-            let pokemonList = try! JSONDecoder().decode(Pokemon.self, from: data)
-            
-            DispatchQueue.main.async {
-                completion(pokemonList.results)
-            }
-        }.resume()
-        
-    }
-}
+//class PokeApi {
+//    func getData(completion: @escaping ([PokemonResponse]) -> ()) {
+//        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151") else {
+//            return
+//        }
+//        URLSession.shared.dataTask(with: url) { (data, response, error)  in
+//            guard let data = data else { return }
+//            
+//            let pokemonList = try! JSONDecoder().decode(Pokemon.self, from: data)
+//            
+//            DispatchQueue.main.async {
+//                completion(pokemonList.results)
+//            }
+//        }.resume()
+//        
+//    }
+//}
 

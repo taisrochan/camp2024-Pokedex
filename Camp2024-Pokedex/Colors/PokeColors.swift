@@ -27,29 +27,33 @@ enum PokemonTypesEnum: String {
     case fire
     case electric
     case dragon
-}
-
-struct PokemonColors {
-    static let colors: [PokemonTypesEnum: Color] = [
-        .rock: Color(hex:"#B69E31"),
-        .ghost: Color(hex:"#70559B"),
-        .steel: Color(hex: "#B7B9D0"),
-        .water: Color(hex: "#6493EB"),
-        .grass: Color(hex:"#74CB48"),
-        .psychic: Color(hex: "#FB5584"),
-        .ice: Color(hex: "#9AD6DF"),
-        .dark: Color(hex: "#75574C"),
-        .fairy: Color(hex: "#E69EAC"),
-        .normal: Color(hex: "#AAA67F"),
-        .fighting: Color(hex: "#C12239"),
-        .flying: Color(hex: "#A891EC"),
-        .poison: Color(hex: "#A43E9E"),
-        .ground: Color(hex: "#DEC16B"),
-        .bug: Color(hex: "#A7B723"),
-        .fire: Color(hex: "#F57D31"),
-        .electric: Color(hex: "#F9CF30"),
-        .dragon: Color(hex: "#7037FF")
-    ]
+    
+    init(fromRawValue: String) {
+        self = PokemonTypesEnum(rawValue: fromRawValue) ?? .rock
+    }
+    
+    var color: Color {
+        switch self {
+            case .rock: Color(hex:"#B69E31")
+            case .ghost: Color(hex:"#70559B")
+            case .steel: Color(hex: "#B7B9D0")
+            case .water: Color(hex: "#6493EB")
+            case .grass: Color(hex:"#74CB48")
+            case .psychic: Color(hex: "#FB5584")
+            case .ice: Color(hex: "#9AD6DF")
+            case .dark: Color(hex: "#75574C")
+            case .fairy: Color(hex: "#E69EAC")
+            case .normal: Color(hex: "#AAA67F")
+            case .fighting: Color(hex: "#C12239")
+            case .flying: Color(hex: "#A891EC")
+            case .poison: Color(hex: "#A43E9E")
+            case .ground: Color(hex: "#DEC16B")
+            case .bug: Color(hex: "#A7B723")
+            case .fire: Color(hex: "#F57D31")
+            case .electric: Color(hex: "#F9CF30")
+            case .dragon: Color(hex: "#7037FF")
+        }
+    }
 }
 
 extension Color {

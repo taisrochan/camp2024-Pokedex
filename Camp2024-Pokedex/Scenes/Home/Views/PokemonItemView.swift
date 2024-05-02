@@ -10,6 +10,9 @@ import SwiftUI
 struct PokemonItemView: View {
     var imageLink = ""
     var pokemonName: String
+    var pokemonType: PokemonTypesEnum {
+        PokemonTypesEnum(fromRawValue: pokemonData?.types.first?.type.name ?? "")
+    }
     @State private var pokemonData: PokemonSelected?
     
     var body: some View {
@@ -18,7 +21,7 @@ struct PokemonItemView: View {
                 .foregroundColor(.clear)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.blue, lineWidth: 1)
+                        .stroke(pokemonType.color, lineWidth: 1)
                 )
                 .frame(width: 104, height: 112)
                 .overlay(
@@ -40,24 +43,24 @@ struct PokemonItemView: View {
                         Spacer()
                         ZStack(alignment: .leading) {
                             Rectangle()
-                                .foregroundColor(.blue)
+                                .foregroundColor(pokemonType.color)
                                 .frame(height: 24)
                                 .cornerRadius(8)
                             Text(pokemonName.capitalized)
                                 .font(.custom("Poppins-Regular", size: 13))
                                 .foregroundColor(.black)
-                                .padding(.leading, 8)
+                                .padding(8)
+                                
+                                
                         }
                     }
                 )
-            
         }
     }
     
     func getSprite(url: String) {        
         PokemonSelectedApi().getData(url: url) { pokemonData in
             self.pokemonData = pokemonData
-            
         }
     }
 }
