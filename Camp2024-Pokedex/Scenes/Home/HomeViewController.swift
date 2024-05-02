@@ -63,27 +63,51 @@ struct HomeViewController: View {
                         }
                     }
                     .padding()
-                    LazyVGrid(
-                        columns: Array(
-                            repeating: GridItem(.flexible(), spacing: 16),
-                            count: 3),
-                        spacing: 16)
-                    {
-                        ForEach(
-                            searchText == ""
-                            ? viewModel.items
-                            : viewModel.items.filter({ $0.name.contains(searchText.lowercased())}),
-                            id: \.id) { item in
-                                PokemonItemView(imageLink: item.url, pokemonName: item.name)
-                            }
-                    }
-                    .padding()
                     
+                    let filteredItems = viewModel.items.filter({ $0.name.contains(searchText.lowercased())})
+                    if (filteredItems.isEmpty) && (searchText != "") {
+                        
+                        VStack {
+                            Text("Ops")
+                                .font(.custom("Poppins-Bold", size: 90))
+                                .foregroundStyle(Color("errorMessageColor"))
+                                .foregroundColor(.red)
+                                .padding()
+                                .multilineTextAlignment(.center)
+                            Text("Este pokemon não está aqui ;(")
+                                .font(.custom("Poppins-Bold", size: 16))
+                                .foregroundStyle(Color("errorMessageColor"))
+                                .padding()
+                                .multilineTextAlignment(.center)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .background(.white)
+                        .cornerRadius(10)
+                        .padding()
+                        
+                    } else {
+                        LazyVGrid(
+                            columns: Array(
+                                repeating: GridItem(.flexible(), spacing: 16),
+                                count: 3),
+                            spacing: 16)
+                        {
+                            ForEach(
+                                searchText == ""
+                                ? viewModel.items : filteredItems,
+                                id: \.id) { item in
+                                    PokemonItemView(imageLink: item.url, pokemonName: item.name)
                                 }
+                            
+                            
+                        }
+                        .padding()
+                    }
                 }
-                .padding()
-                .onTapGesture {
-                                UIApplication.shared.endEditing()
+            }
+            .padding()
+            .onTapGesture {
+                UIApplication.shared.endEditing()
             }
             .navigationTitle("My Screen")
         }.onAppear() {
@@ -96,7 +120,7 @@ struct HomeViewController: View {
 extension UIApplication {
     func endEditing() {
         guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
-
+        
         window.endEditing(true)
     }
 }
