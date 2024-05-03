@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct HomeViewController: View {
-    @StateObject var viewModel = MyViewModel()
+struct HomeViewController<ViewModel>: View where ViewModel: HomeViewModel {
+    @StateObject var viewModel: ViewModel
     @State private var searchText = ""
     @State private var isSwitchOn = false
     
@@ -99,8 +99,6 @@ struct HomeViewController: View {
                                 id: \.id) { item in
                                     PokemonItemView(imageLink: item.url, pokemonName: item.name)
                                 }
-                            
-                            
                         }
                         .padding()
                     }
@@ -114,7 +112,6 @@ struct HomeViewController: View {
         }.onAppear() {
             viewModel.fetchPokemon()
         }
-        
     }
 }
 
@@ -126,12 +123,10 @@ extension UIApplication {
     }
 }
 
-
-
-struct HomeViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeViewController()
-    }
-}
+//struct HomeViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeViewController()
+//    }
+//}
 
 

@@ -8,10 +8,18 @@
 import Foundation
 import SwiftUI
 
-class MyViewModel: ObservableObject {
+protocol HomeViewModel: ObservableObject {
+    var items: [PokemonEntry] { get set }
+    func fetchPokemon()
+}
+
+class HomeViewModelImpl: HomeViewModel {
     @Published var items: [PokemonEntry] = []
-    private let client = PokemonAPIClient()
+    private let client: HomeService
     
+    init(client: HomeService) {
+        self.client = client
+    }
     
     func fetchPokemon() {
         client.fetchPokemon { result in

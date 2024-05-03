@@ -58,7 +58,7 @@ struct PokemonItemView: View {
     }
     
     func getSprite(url: String) {        
-        PokemonSelectedApi().getData(url: url) { pokemonData in
+        HomeServiceImpl().getData(url: url) { pokemonData in
             self.pokemonData = pokemonData
         }
     }

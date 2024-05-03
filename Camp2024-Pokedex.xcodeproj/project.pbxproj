@@ -14,9 +14,9 @@
 		8F6934272BE2B74100C29381 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6934262BE2B74100C29381 /* Poppins-Regular.ttf */; };
 		8F6934292BE2B76D00C29381 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6934282BE2B76D00C29381 /* Poppins-Bold.ttf */; };
 		8F69342C2BE2C0C600C29381 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69342B2BE2C0C600C29381 /* SplashScreen.swift */; };
-		8F9492C42BE30F06009D2981 /* PokemonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9492C32BE30F06009D2981 /* PokemonSelected.swift */; };
 		8F9492C92BE32FCB009D2981 /* PokemonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9492C82BE32FCB009D2981 /* PokemonItemView.swift */; };
 		8FD0CBDB2BE3D971004754CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0CBDA2BE3D971004754CD /* ContentView.swift */; };
+		8FE3B9572BE493470011DFFD /* PokemonInfosModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3B9562BE493470011DFFD /* PokemonInfosModels.swift */; };
 		8FF78BDD2BE27466008F2138 /* Camp2024_PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */; };
 		8FF78BE12BE2746B008F2138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF78BE02BE2746B008F2138 /* Assets.xcassets */; };
 		8FF78BE42BE2746B008F2138 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF78BE32BE2746B008F2138 /* Preview Assets.xcassets */; };
@@ -31,9 +31,9 @@
 		8F6934262BE2B74100C29381 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		8F6934282BE2B76D00C29381 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		8F69342B2BE2C0C600C29381 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		8F9492C32BE30F06009D2981 /* PokemonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelected.swift; sourceTree = "<group>"; };
 		8F9492C82BE32FCB009D2981 /* PokemonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonItemView.swift; sourceTree = "<group>"; };
 		8FD0CBDA2BE3D971004754CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8FE3B9562BE493470011DFFD /* PokemonInfosModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfosModels.swift; sourceTree = "<group>"; };
 		8FF78BD92BE27466008F2138 /* Camp2024-Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camp2024-Pokedex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp2024_PokedexApp.swift; sourceTree = "<group>"; };
 		8FF78BE02BE2746B008F2138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		8F09DB8E2BE2C4A600A380C3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8FE3B95A2BE4968B0011DFFD /* Favorites */,
+				8FE3B9592BE4966C0011DFFD /* PokemonDetails */,
 				8F09DB8F2BE2C4D000A380C3 /* Home */,
 			);
 			path = Scenes;
@@ -67,7 +69,6 @@
 				8F09DB902BE2C51E00A380C3 /* HomeViewController.swift */,
 				8F09DB922BE2D3D700A380C3 /* HomeViewModel.swift */,
 				8F09DB972BE2FD6700A380C3 /* HomeService.swift */,
-				8F9492C32BE30F06009D2981 /* PokemonSelected.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -76,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				8F09DB952BE2FCF400A380C3 /* PokeModel.swift */,
+				8FE3B9562BE493470011DFFD /* PokemonInfosModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +88,30 @@
 				8F9492C82BE32FCB009D2981 /* PokemonItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8FE3B9582BE496120011DFFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FF78BE02BE2746B008F2138 /* Assets.xcassets */,
+				8FF78BF12BE28190008F2138 /* Colors */,
+				8FF78BF42BE292EA008F2138 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8FE3B9592BE4966C0011DFFD /* PokemonDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PokemonDetails;
+			sourceTree = "<group>";
+		};
+		8FE3B95A2BE4968B0011DFFD /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		8FF78BD02BE27466008F2138 = {
@@ -107,12 +133,10 @@
 		8FF78BDB2BE27466008F2138 /* Camp2024-Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				8FE3B9582BE496120011DFFD /* Resources */,
 				8F09DB942BE2FCBA00A380C3 /* Models */,
 				8F09DB8E2BE2C4A600A380C3 /* Scenes */,
-				8FF78BF42BE292EA008F2138 /* Font */,
-				8FF78BF12BE28190008F2138 /* Colors */,
 				8FF78BDC2BE27466008F2138 /* Camp2024_PokedexApp.swift */,
-				8FF78BE02BE2746B008F2138 /* Assets.xcassets */,
 				8FF78BE22BE2746B008F2138 /* Preview Content */,
 				8F69342B2BE2C0C600C29381 /* SplashScreen.swift */,
 				8FD0CBDA2BE3D971004754CD /* ContentView.swift */,
@@ -217,10 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE3B9572BE493470011DFFD /* PokemonInfosModels.swift in Sources */,
 				8F09DB912BE2C51E00A380C3 /* HomeViewController.swift in Sources */,
 				8F9492C92BE32FCB009D2981 /* PokemonItemView.swift in Sources */,
 				8F09DB932BE2D3D700A380C3 /* HomeViewModel.swift in Sources */,
-				8F9492C42BE30F06009D2981 /* PokemonSelected.swift in Sources */,
 				8F09DB962BE2FCF400A380C3 /* PokeModel.swift in Sources */,
 				8F69342C2BE2C0C600C29381 /* SplashScreen.swift in Sources */,
 				8FD0CBDB2BE3D971004754CD /* ContentView.swift in Sources */,
